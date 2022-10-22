@@ -1,0 +1,451 @@
+//========================================================================================================================================================
+.animals-video {
+	padding-top: 40px;
+	padding-bottom: 80px;
+	// .animals-video__container
+	&__container {
+	}
+	// .animals-video__title
+	&__title {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 48, 24, 999, 320, 1);
+		line-height: 120%;
+		color: $blackBlue;
+		margin-left: 187px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	// .animals-video__body
+	&__body {
+		display: flex;
+		column-gap: 90px;
+	}
+}
+.animals-link {
+	// .animals-link__items
+	&__items {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		row-gap: 10px;
+		padding: 16px 0;
+		height: 100%;
+		min-width: 100px;
+		background: linear-gradient(
+				315.75deg,
+				rgba(254, 210, 144, 0.7) 30.06%,
+				#febdab 100.95%,
+				rgba(254, 210, 144, 0.7) 106.36%
+			),
+			linear-gradient(
+				315.75deg,
+				rgba(254, 189, 171, 0.74) 30.06%,
+				rgba(243, 169, 248, 0.66) 50.74%,
+				#e0d8f0 80.49%,
+				#eaf7fe 127.9%,
+				#eaf7fe 149.54%
+			),
+			linear-gradient(
+				315.75deg,
+				rgba(254, 189, 171, 0.74) 30.06%,
+				rgba(243, 169, 248, 0.66) 50.74%,
+				#e0d8f0 80.49%,
+				#eaf7fe 127.9%,
+				#eaf7fe 149.54%
+			);
+		border-radius: 5px;
+	}
+}
+
+// ._icon-gorilla
+.icon-gorilla {
+	font-size: 47px;
+}
+
+// ._icon-alligator
+.icon-alligator {
+	font-size: 52px;
+	height: 63px;
+}
+// ._icon-panda-widget
+.icon-panda-widget {
+	display: inline-block;
+	font-size: 48px;
+}
+// ._icon-eagle
+.icon-eagle {
+	font-size: 54px;
+}
+// ._icon-sloth
+.icon-sloth {
+	font-size: 50px;
+}
+// ._icon-penguin-icon
+.icon-penguin-icon {
+	font-size: 58px;
+}
+
+// ._icon-arrow-right
+.icon-arrow-right {
+	width: 62px;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	outline: 0.3px solid #000;
+}
+
+.animals-link {
+	// .animals-link__list
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 80px;
+		width: 80px;
+		border-radius: 50%;
+		border: 2px solid #fd8e1bff;
+		background-color: $mainColor;
+		color: #000;
+		cursor: pointer;
+	}
+	// .animals-link__link
+	&__link {
+	}
+}
+//========= Active Links ===============================================================================================================================================
+.animal-svg path {
+	fill: #000;
+	transition: fill 0.3s;
+}
+
+.animal-svg:hover path {
+	fill: #4b9200ff;
+}
+
+/* Active Links */
+.active-link .animal-svg path {
+	fill: #4b9200ff;
+}
+
+//========================================================================================================================================================
+
+.video {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	background-image: url("../img/zoos-page/panda-youtube.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		background-image: url("../img/zoos-page/youtube-emblem.png");
+		background-repeat: no-repeat;
+		height: 78px;
+		width: 138px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.video {
+	// .video__slider
+	&__slider {
+		position: relative;
+	}
+	// .video__wrapper
+	&__wrapper {
+		//position: relative !important;
+	}
+	// .video__slide
+	&__slide {
+		width: 500px;
+		margin-top: 80px;
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.video-slide {
+	position: relative;
+	width: 100%;
+	background-color: red;
+	background: url("../img/zoos-page/panda-video.png") no-repeat;
+	padding-top: 79.25%;
+	cursor: pointer;
+	@media (max-width: em(1590)) {
+		padding-top: 56.25%;
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.swiper-button-next-video,
+.swiper-button-prev-video {
+	position: relative !important;
+	height: rem(62) !important;
+	width: rem(62) !important;
+	bottom: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(-53%);
+	font-size: rem(10);
+	background-color: rgba(249, 128, 75, 1);
+	border-radius: 50%;
+	transition: background-color 0.4s ease-in-out;
+	cursor: pointer;
+
+	z-index: 5;
+	&:hover {
+		background-color: #e47209;
+	}
+	&:active {
+		background-color: #4b9200;
+	}
+}
+
+.swiper-button-next-video {
+	position: absolute;
+	right: 8.7%;
+	@extend %ic;
+	@extend._icon-arrow-right;
+	@media (max-width: em(1590)) {
+		bottom: 140px;
+		right: 52px;
+	}
+
+	//@media (max-width: ($smalldesctop)) {
+	//	right: 35.2%;
+	//}
+	//@media (max-width: $mobile) {
+	//	right: 38.2%;
+	//}
+}
+.swiper-button-prev-video {
+	position: absolute;
+	left: 8.7%;
+	@extend %ic;
+	@extend._icon-arrow-left;
+	@media (max-width: em(1590)) {
+		bottom: 60px;
+	}
+
+	//@media (max-width: ($smalldesctop)) {
+	//	left: 35.2%;
+	//}
+	//@media (max-width: $mobile) {
+	//	left: 38.2%;
+	//}
+}
+
+.btn-block-flex {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: em(1590)) {
+		position: absolute;
+		right: 0;
+	}
+}
+
+//========================================================================================================================================================
+.about-animals {
+	padding-bottom: 180px;
+	color: $black;
+	font-weight: 400;
+	line-height: 140%;
+	// .about-animals__container
+	&__container {
+	}
+	// .about-animals__title
+	&__title {
+		font-weight: 500;
+		font-size: 48px;
+		@include adaptiveValue("font-size", 48, 24, 998, 320, 1);
+		line-height: 120%;
+		color: $green;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .about-animals__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 70px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #767474;
+	}
+	// .about-animals__image
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+	// .about-animals__desription
+	&__desription {
+		display: flex;
+		flex-direction: column;
+	}
+	// .about-animals__text
+	&__text {
+		max-width: 668px;
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 140%;
+		color: #ababab;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	// about-animals__link
+	&__link {
+		color: $green;
+	}
+
+	// .about-animals__btn
+	&__btn {
+		color: #fff;
+		button {
+			padding: 16px 74px;
+		}
+	}
+	// .about-animals__content
+	&__content {
+	}
+}
+.button {
+	// .button_border
+	&_border {
+	}
+}
+.content-about {
+	// .content-about__items
+	&__items {
+		padding-top: 40px;
+	}
+	// .content-about__diet
+	&__diet {
+	}
+	// .content-about__text
+	&__text {
+	}
+	// .content-about__range
+	&__range {
+	}
+	// .content-about__habital
+	&__habital {
+	}
+	// .content-about__info
+	&__info {
+	}
+	// .content-about__block
+	&__block {
+	}
+	// .content-about__item
+	&__item {
+	}
+	// .content-about__link
+	&__link {
+	}
+	// .content-about__btn
+	&__btn {
+		display: inline-block;
+		padding: 9px 25px;
+		font-weight: 400;
+		line-height: 140%;
+		text-align: center;
+		color: #000;
+		background: #f1f3f2;
+		border: 1px solid #333b41;
+		border-radius: 5px;
+		transition: background 0.2s, color 0.2s;
+		&:hover {
+			background-color: $orange;
+			color: $mainColor;
+		}
+	}
+	// .content-about__more
+	&__more {
+	}
+}
+.button-more {
+}
+.more {
+	// .more__text
+	&__text {
+	}
+	// .more__items
+	&__items {
+	}
+	// .more__item
+	&__item {
+	}
+	// .more__title
+	&__title {
+	}
+	// .more__link
+	&__link {
+	}
+}
+
+//========================================================================================================================================================
+.donate-animals {
+	position: relative;
+	background-image: url("../img/zoos-page/panda-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	min-height: 390px;
+	@media (max-width: $smalldesctop) {
+		//background-position: 29%;
+		//background-size: 100%;
+	}
+
+	// .donate-animals__container
+	&__container {
+	}
+	// .donate-animals__btn
+	&__btn {
+		display: flex;
+		justify-content: center;
+		gap: 300px;
+	}
+	// .donate-animals__form
+	&__form {
+		button {
+			//margin: auto auto 50px auto;
+			color: $mainColor;
+			border-radius: 25px;
+			padding: 16px 118px;
+		}
+	}
+}
+.button {
+}

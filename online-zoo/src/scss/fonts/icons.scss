@@ -1,0 +1,80 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-panda-widget:before {
+	content: "\e900";
+}
+._icon-eagle:before {
+	content: "\e901";
+}
+._icon-gorilla:before {
+	content: "\e902";
+}
+._icon-alligator:before {
+	content: "\e903";
+}
+._icon-panther-icon:before {
+	content: "\e904";
+}
+._icon-sloth:before {
+	content: "\e905";
+}
+._icon-penguin-icon:before {
+	content: "\e906";
+}
+._icon-facebook-icon:before {
+	content: "\e907";
+}
+._icon-twitter:before {
+	content: "\e908";
+}
+._icon-instagram:before {
+	content: "\e909";
+}
+._icon-youtube:before {
+	content: "\e90a";
+}
+._icon-user-icon:before {
+	content: "\e90b";
+}
+._icon-select-arrow:before {
+	content: "\e90c";
+}
+._icon-pay-card:before {
+	content: "\e90d";
+}
+._icon-zoo-card:before {
+	content: "\e90e";
+}
+._icon-monkey-icon:before {
+	content: "\e90f";
+}
+._icon-arrow-left:before {
+	content: "\e910";
+}
+._icon-arrow-right:before {
+	content: "\e911";
+}
+._icon-dollars-icon:before {
+	content: "\e912";
+}
+._icon-minus:before {
+	content: "\e913";
+}
+._icon-plus:before {
+	content: "\e914";
+}
