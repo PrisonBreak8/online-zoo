@@ -1,0 +1,103 @@
+// Заголовки, общие БЄМ блоки и проче...
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.title {
+	font-weight: 400;
+	font-size: rem(36);
+	line-height: 130%;
+	color: $blackBlue;
+	text-align: center;
+}
+
+.popup {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.4s ease 0s;
+	@media (max-width: em(920)) {
+		display: block;
+	}
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.open .popup__content {
+		//transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	// .popup__body
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+		max-width: 800px;
+		margin: 0 auto;
+		transition: all 0.4s ease 0s;
+	}
+	// .popup__content
+	&__content {
+		position: relative;
+		padding: 20px 30px;
+		opacity: 0;
+		background-color: $mainColor;
+		transform: translate(0px, -100%);
+		//transform: perspective(600px) translate(0px, -100%) rotate(25deg);
+		transition: all 0.4s ease 0s;
+	}
+	// .popup__close
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 20px;
+		color: #fcc6abff;
+	}
+	// .popup__title
+	&__title {
+		color: $black;
+	}
+	// .popup__text
+	&__text {
+		color: $black;
+	}
+}
+
+@media (max-width: em(920)) {
+	body.lock {
+		overflow: hidden;
+	}
+}
+
+//.popup.open {
+//	opacity: 1;
+//	visibility: visible;
+//}
+
+//.popup.open .popup__content {
+//	transform: translate(0px, 0px);
+//	opacity: 1;
+//}

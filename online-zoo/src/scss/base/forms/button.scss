@@ -1,0 +1,36 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-block;
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 140%;
+	text-align: center;
+	text-transform: uppercase;
+	padding: rem(15) rem(58);
+	background-color: #fd8c20ff;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	// .button_border
+	&_border {
+		border-radius: rem(25);
+	}
+	// .button_size
+	&_size {
+		padding: rem(16) rem(97);
+	}
+	&:hover {
+		background-color: rgba(228, 114, 9, 1);
+	}
+
+	&:active {
+		background-color: #4b9200;
+	}
+
+	&._fw {
+		width: 100%;
+	}
+}
+
+//<button type="button" class="button  button_border">leave feedback</button>
